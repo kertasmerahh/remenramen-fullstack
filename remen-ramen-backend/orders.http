@@ -1,0 +1,65 @@
+@baseUrl = http://localhost:3001
+
+### 1. GET semua order
+GET {{baseUrl}}/orders
+
+### 2. GET satu order berdasarkan ID
+GET {{baseUrl}}/orders/1
+
+### 3. POST buat order baru (201 Created)
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "customerName": "Rian Hidayat",
+  "menuName": "Shoyu Ramen",
+  "quantity": 2,
+  "totalPrice": 30000,
+  "isTakeaway": false,
+  "status": "pending",
+  "orderDate": "2026-11-21T10:00:00.000Z"
+}
+
+### 4. PATCH ubah status / data order (200 OK)
+PATCH {{baseUrl}}/orders/4
+Content-Type: application/json
+
+{
+  "status": "cooking"
+}
+
+### 5. DELETE hapus order (200 OK)
+DELETE {{baseUrl}}/orders/4
+
+### --- SKENARIO ERROR (Untuk Screenshot Validasi & Exception) ---
+
+### 6. Error 400 Bad Request - Validasi DTO gagal
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "customerName": "A",
+  "menuName": "",
+  "quantity": 0,
+  "totalPrice": -5000,
+  "isTakeaway": "bukan-boolean",
+  "status": "ngasal",
+  "orderDate": "bukan-tanggal"
+}
+
+### 7. Error 409 ConflictException - Pelanggan & menu sama masih pending
+# Jalankan request #3 dulu (status pending), lalu jalankan ini:
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "customerName": "Mas Agus",
+  "menuName": "Tantan Ramen",
+  "quantity": 1,
+  "totalPrice": 15000,
+  "isTakeaway": false,
+  "status": "pending"
+}
+
+### 8. Error 404 NotFoundException - ID tidak ditemukan
+GET {{baseUrl}}/orders/999

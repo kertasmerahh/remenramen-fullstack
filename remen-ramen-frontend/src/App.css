@@ -1,0 +1,143 @@
+/* Remen Ramen Styles */
+
+.bg-admin-wrapper {
+  background-color: #F8FAFC;
+  color: #1E293B;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Clean */
+.navbar-brand-title {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--brand-red) !important;
+}
+
+.nav-btn-link {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero-banner {
+  background: linear-gradient(135deg, #FFF5F5 0%, #FFFFFF 100%);
+  border-bottom: 1px solid #FEE2E2;
+}
+
+/* Card Modern (Katalog Menu) */
+.card-menu {
+  border: 1px solid #F1F5F9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #FFFFFF;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card-menu:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(217, 4, 41, 0.12);
+  border-color: #FECDD3;
+}
+
+.card-menu-img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Tombol Brand Red */
+.btn-brand {
+  background-color: var(--brand-red);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-brand:hover {
+  background-color: var(--brand-red-dark);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(217, 4, 41, 0.35);
+}
+
+.badge-soft-red {
+  background-color: var(--brand-red-subtle);
+  color: var(--brand-red);
+  font-weight: 700;
+}
+
+/* Halaman Form Pemesanan (pesan) */
+.form-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brand-red);
+  border-bottom: 2px solid #FEE2E2;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 1.5px solid #CBD5E1;
+  padding: 0.7rem 1rem;
+  font-weight: 500;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 0.25rem rgba(217, 4, 41, 0.15);
+}
+
+.btn-submit-order {
+  background-color: var(--brand-red);
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 0.9rem 2rem;
+  border: none;
+  transition: all 0.2s;
+}
+
+.btn-submit-order:hover {
+  background-color: var(--brand-red-dark);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(217, 4, 41, 0.3);
+}
+
+/* Halaman Dashboard Kasir & Dapur (admin) */
+.admin-navbar {
+  background-color: var(--brand-navy);
+  border-bottom: 2px solid var(--brand-red);
+}
+
+.card-kpi {
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.table-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}

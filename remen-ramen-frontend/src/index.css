@@ -1,0 +1,23 @@
+:root {
+  --brand-red: #D90429;
+  --brand-red-dark: #A00320;
+  --brand-red-subtle: #FFF1F2;
+  --brand-dark: #1E232A;
+  --brand-navy: #0F172A;
+  --brand-gray: #64748B;
+  --brand-bg: #FAF9F6;
+}
+
+body {
+  margin: 0;
+  background-color: var(--brand-bg);
+  color: var(--brand-dark);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
